@@ -9,6 +9,9 @@ import "./scss/app.scss";
 
 import App from "./App";
 
+//console.log(store.getState());
+//store.subscribe(() => console.log(store.getState()));
+
 ReactDOM.render(
   <Router>
     <Provider store={store}>

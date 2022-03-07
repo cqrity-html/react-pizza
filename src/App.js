@@ -14,7 +14,7 @@ function App() {
     axios.get('http://localHost:3000/db.json').then(({ data }) => {
       dispatch(setPizzas(data.pizzas));
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="wrapper">
@@ -30,20 +30,3 @@ function App() {
 }
 
 export default App;
-
-/*
-const mapStateToProps = (state) => {
-  return {
-    items: state.pizzas.items,
-    filters: state.filters,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setPizzas: (items) => dispatch(setPizzas(items)),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
-*/
